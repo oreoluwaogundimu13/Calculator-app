@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(223,226,254);
+}
+
+#iphone {
+    max-width: 395px;
+    height: 812px;
+    margin: auto;
+    margin-top: 50px;
+    background-image: url("../images/phone-frame-mobile-phone-hd-png-download.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#home {
+    text-align: center;
+    cursor: pointer;
+    position: absolute; 
+} 
+
+#calc3d {
+    margin-bottom: 6rem;
+}
+
+#home p {
+    margin-top: 1rem;
+}
+
+#start-btn {
+    margin-top: 2rem;
+    background: rgb(134,140,209);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+#start-btn:hover {
+    cursor: pointer;
+}
+
+.show-calc{
+    animation: launchIn 0.8s linear forwards;
+}
+
+.show-close {
+    animation: launchOut 0.8s linear forwards;
+}
+
+
+@keyframes moveIn {
+    from {
+      opacity: 0;
+      transform: translateY(-150%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  
+@keyframes moveOut {
+    from {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-812px);
+    }
+  }
+
+
+#calc {
+    background-color: rgb(94,93,110);
+    height: 89.5%;
+    width: 85.2%;
+    position: relative; 
+    top: -2px;
+    right: -1px;
+    border-radius: 30px;
+    /* display: grid; */
+     grid-template-rows: 0.2fr 0.9fr; 
+     overflow: hidden; 
+    color: var(--calc-default-color);
+    opacity: 0; 
+    transform: translateY(-150%);     
+} 
+
+
+header {
+    padding: 0.8rem;
+} 
+
+.close .bar {
+    width: 18px;
+    height: 2px;
+    background-color: grey;
+    position: relative;
+}
+  
+.close .bar:nth-child(1) {
+    transform: rotate(45deg) translate(1px);
+    animation: animateWidth 0.5s;
+}
+  
+.close .bar:nth-child(2) {
+    transform: rotate(-45deg) translate(2px);
+    animation: animateWidth 0.5s 0.2s;
+}
+
+@keyframes animateWidth {
+    from {
+      width: 2px;
+    }
+    to {
+      width: 18px;
+    }
+}
+
+.close:hover > .bar {
+    animation: animateWidth 0.5s;
+}
+  
+  
+#display {
+    width: 90%;
+    height: 40%;
+    background-color: rgb(195,228,197);
+    margin: 1rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#expression-box {
+    font-weight: bolder;
+    font-size: 16px;
+    color: grey;
+    letter-spacing: 3px;
+}
+/* 
+expression-box span {
+    color: var(--calc-red);
+    position: relative;
+    /* top: 5px; */
+
+#result-box {
+    font-size: 30px;
+}
+
+.pad {
+    background-color: var(--calc-pad);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 8%;
+    gap: 0.2rem;
+}
+
+.pad .pad-unit {
+    width: 100%;
+    height: 55px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid #fff;
+    
+}
+
+.pad-unit.blue-color {
+    background: rgb(133,137,194);
+    color: #fff;  
+}
+
+.pad-unit.operator {
+    background: rgb(242,122,130);
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.pad-unit.num {
+    background: rgb(120,119,142);
+    color: #fff;
+    margin-top: 0.5rem;   
+}
+
+.pad-unit.zero {
+    background: rgb(120,119,142);
+    color: #fff;
+    margin-top: 0.5rem;
+}
+

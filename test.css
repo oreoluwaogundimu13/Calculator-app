@@ -1,0 +1,115 @@
+/* Here is a basic CSS code to style the calculator: */
+
+/* style.css */
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* iPhone container */
+#iphone {
+  width: 300px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+
+/* Calculator interface */
+#calc {
+  display: none;
+}
+
+#display {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+#expression-box {
+  font-size: 18px;
+  color: #333;
+}
+
+#result-box {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Pad styles */
+.pad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.pad-unit {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.pad-unit:hover {
+  background-color: #ddd;
+}
+
+.blue-color {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+/* Home screen styles */
+#home {
+  text-align: center;
+  padding: 20px;
+}
+
+#calc3d {
+  width: 50%;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+
+#start-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background-color: #0069d9;
+}
+/* 
+This CSS code styles the calculator interface, including the display, buttons, and pad layout. It also styles the home screen and the "Get Started" button.
+
+Please note that this is a basic implementation and you may want to add more styles and customizations to make it look more like a real calculator. */
